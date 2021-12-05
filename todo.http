@@ -1,0 +1,31 @@
+### 
+GET http://localhost:3000/todos/
+
+### 1. Returns a list of all todos whose status is 'TO DO'
+GET http://localhost:3000/todos/?search_q=Play
+
+### 2. Returns a specific todo based on the todo ID
+GET http://localhost:3000/todos/11
+
+### 3. Create a todo in the todo table,
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 12,
+  "todo": "Learn Python",
+  "priority": "HIGH",
+  "status": "TO DO"
+}
+
+### 4. Updates the details of a specific todo based on the todo ID
+PUT http://localhost:3000/todos/11
+Content-Type: application/json
+
+{
+    "todo": "Some task"
+}
+
+
+### 5. Deletes a todo from the todo table based on the todo ID
+DELETE http://localhost:3000/todos/11/
